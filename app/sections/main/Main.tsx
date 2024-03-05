@@ -14,6 +14,7 @@ const Main = () => {
       contactElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   return (
     <div className={styles.container}>
       <div className={styles['text-wrapper']}>
