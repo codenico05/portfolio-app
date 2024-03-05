@@ -1,0 +1,63 @@
+@import '../../utils/mixin';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color-secondary);
+  color: #242424;
+  height: 100px;
+  position: relative;
+  z-index: 3;
+
+  @include mobile {
+  }
+
+  .mobile-items {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 250px;
+    background-color: var(--primary-color);
+    width: 100vw;
+    border-radius: 0 0 1.5rem 1.5rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 0;
+    align-items: center;
+    display: none;
+
+    @include mobile {
+      display: flex;
+    }
+
+    .mobile-item {
+      font-size: 1.4rem;
+      color: var(--text-color);
+    }
+  }
+
+  .text-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: -200px;
+    left: -80%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 0;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .text {
+    color: #eee;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
