@@ -1,0 +1,81 @@
+@import '../../utils/mixin';
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  margin: auto;
+  gap: 8rem;
+  margin-top: 10rem;
+
+  @include mobile {
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+
+  .text-wrapper {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    row-gap: 20px;
+    cursor: default;
+
+    @include mobile {
+      margin-top: 0;
+      text-align: center;
+      align-items: center;
+    }
+
+    .title {
+      font-size: 4.5rem;
+      font-weight: bold;
+      line-height: 100%;
+
+      @include mobile {
+        font-size: 3rem;
+      }
+    }
+
+    .text {
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+
+      @include mobile {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+
+    .image-bg {
+      background-color: var(--primary-color);
+      height: 460px;
+      width: 400px;
+      border-radius: 50%;
+      transform: translateY(100px);
+
+      @include tablet {
+        height: 360px;
+        width: 300px;
+      }
+      @include mobile {
+        flex-direction: column;
+        height: 260px;
+        width: 200px;
+        transform: translateY(0);
+      }
+
+      .image {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}
