@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef, ForwardedRef } from 'react';
 import styles from './Button.module.scss';
 
 interface Props {
@@ -6,12 +6,14 @@ interface Props {
   handleClick: () => void;
 }
 
-const Button = ({ text, handleClick }: Props) => {
+const Button = forwardRef(({ text, handleClick }: Props, ref: ForwardedRef<HTMLButtonElement>) => {
   return (
-    <button className={styles.wrapper} onClick={handleClick}>
+    <button className={styles.wrapper} onClick={handleClick} ref={ref}>
       {text}
     </button>
   );
-};
+});
+
+Button.displayName = 'Button';
 
 export default Button;
