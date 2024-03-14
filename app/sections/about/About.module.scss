@@ -1,0 +1,132 @@
+@import '../../utils/mixin';
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+
+  .title {
+    font-size: 3rem;
+    margin: 4rem 2rem;
+
+    @include mobile {
+      font-size: 1.5rem;
+      margin: 1rem 2rem;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    align-self: center;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      padding: 0 2rem;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      flex: 0.6;
+      .skill-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &::after {
+          content: '';
+          width: 100%;
+          position: absolute;
+          bottom: -20px;
+          background: rgba(238, 238, 238, 0.5);
+          height: 1px;
+        }
+
+        .heading {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          .index {
+            font-size: 3.5rem;
+            flex: 0.3;
+
+            @include desktop {
+              font-size: 3rem;
+            }
+            @include tablet {
+              font-size: 2rem;
+            }
+
+            @include mobile {
+              font-size: 1.2rem;
+            }
+          }
+          .label {
+            font-size: 1.5rem;
+            cursor: pointer;
+            flex: 1;
+
+            &:hover {
+              opacity: 0.5;
+            }
+
+            @include desktop {
+              font-size: 1.2rem;
+            }
+
+            @include tablet {
+              font-size: 0.9rem;
+            }
+
+            @include mobile {
+              font-size: 0.7rem;
+            }
+          }
+          .image {
+            height: 40px;
+            width: 40px;
+            flex: 0.2;
+
+            @include tablet {
+              height: 28px;
+              width: 28px;
+            }
+            @include mobile {
+              height: 20px;
+              width: 20px;
+            }
+          }
+        }
+        .text {
+          color: rgba(238, 238, 238, 0.5);
+
+          @include desktop {
+            font-size: 0.9rem;
+          }
+          @include tablet {
+            font-size: 0.775rem;
+          }
+          @include mobile {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+  .tag-container {
+    @include mobile {
+      margin-top: 3rem;
+    }
+  }
+}

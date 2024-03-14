@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color: #242424;
+  --text-color: #eee;
+  --heading-color: #eea5a6;
+  --accent-color: #e493b3;
+  --primary-color: #8e7ab5;
+  --secondary-color: #b784b7;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+section {
+  height: 100vh;
+  height: 100svh;
+  width: 100vw;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  position: relative;
+}
