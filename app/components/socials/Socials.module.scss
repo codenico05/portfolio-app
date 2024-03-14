@@ -1,0 +1,20 @@
+@import '../../utils/mixin';
+
+.container {
+  display: flex;
+  gap: 0 20px;
+
+  .item {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

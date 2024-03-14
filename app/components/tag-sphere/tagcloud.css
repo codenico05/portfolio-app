@@ -1,0 +1,12 @@
+.container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.entry {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, -50%);
+}
